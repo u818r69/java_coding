@@ -10,7 +10,7 @@ public class Question02 {
 		try {
 			//キーボード入力
 			String inputStr = scanner.nextLine();
-			//String型→int型変換
+			//String型からint型に型変換
 			int num = Integer.parseInt(inputStr);
 			//if文
 			if(num%2 == 0) {
