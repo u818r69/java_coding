@@ -1,7 +1,7 @@
 package basis.Question02;
 import java.util.Scanner;
 
-public class Question2 {
+public class Question02 {
 	public static void main(String[] args) {
 		//メッセージ出力
 		System.out.println("整数を入力してください");
