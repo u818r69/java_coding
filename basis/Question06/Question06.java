@@ -61,8 +61,6 @@ public class Question06 {
 			default:
 				// メッセージ出力
 				System.out.println("0～6の範囲で入力してください");
-				// break文
-				break;
 			}
 		}
 		// catch文
