@@ -17,24 +17,21 @@ public class Question05 {
 			String strInput = scanner.nextLine();
 			// String型からint型に型変換
 			int intInput = Integer.parseInt(strInput);
-			// if文：入力値が0の場合
-			if (intInput == 0) {
-				// 「0では割り算できません」のメッセージ出力
-				System.out.println("0では割り算できません\n終了");
-			}
 			// ans=100/strinput
-			else {
 				int ans = 100 / intInput;
 				// 「割り算結果はansです」のメッセージ出力
-				System.out.println("割り算結果は" + ans + "です\n終了");
-			}
+				System.out.println("割り算結果は" + ans + "です");
 			// try文終了
-		}
-		// catch文：整数以外の値が入力された場合
-		catch (NumberFormatException e) {
+		}catch (NumberFormatException e) { // catch文：整数以外の値が入力された場合
 			// 「整数以外の値が入力されました」のメッセージ出力
-			System.out.println("整数以外の値が入力されました\n終了");
+			System.out.println("整数以外の値が入力されました");
 			// catch文：”0”が入力された場合
+		}catch(ArithmeticException e) { //catch文：0が入力された場合
+			System.out.println("0では割り算できません");
+		}finally {
+			System.out.println("終了");
+			scanner.close();
 		}
+		
 	}
 }

@@ -8,27 +8,27 @@ public class Question09 {
 		//変数宣言（配列、Scanner
 		int array[] = new int[5];
 		Scanner scanner = new Scanner(System.in);
-		//1-1.「5つの整数を入力してください」の表示
+		//1.「5つの整数を入力してください」の表示
 		System.out.println("5つの整数を入力してください");
 		try {
-			//1-2. 繰り返し処理（初期値1、6未満、1を足していく）
+			//2. 繰り返し処理（初期値1、6未満、1を足していく）
 			for (int i = 0; i < 5; i++) {
-				//1-2-1. 「i個目：」を表示
+				//1. 「i個目：」を表示
 				System.out.print(i + 1 + "個目：");
-				//1-2-2. キーボード入力を配列変数に格納
+				//2. キーボード入力を配列変数に格納
 				String strInput = scanner.nextLine();
 				array[i] = Integer.parseInt(strInput);
-				//1-2-3. 繰り返し処理完了
+				//3. 繰り返し処理完了
 			}
 			System.out.print("昇順ソート結果は");
 			//２繰り返し処理で昇順ソート
-			//2-1. 繰り返し処理（初期値0、要素数-1未満、1を足していく）
+			//1. 繰り返し処理（初期値0、要素数-1未満、1を足していく）
 			for (int i = 0; i < array.length; i++) {
-				//2-1-1. （初期値i、要素数未満、1を足していく） 
+				//1. （初期値i、要素数未満、1を足していく） 
 				for (int j = i + 1; j < array.length; j++) {
-					//2-1-2. array[I] がsorarray[j]より小さい場合       
+					//2. array[I] がsorarray[j]より小さい場合       
 					if (array[i] > array[j]) {
-						//2-1-3. 値交換のための変数宣言
+						//3. 値交換のための変数宣言
 						int swp = array[j];
 						array[j] = array[i];
 						array[i] = swp;

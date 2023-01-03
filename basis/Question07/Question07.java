@@ -10,10 +10,10 @@ public class Question07 {
 		System.out.println("整数の数を入力してください");
 		//1-2. scanner変数の宣言
 		Scanner scanner = new Scanner(System.in);
-		//1-3. strInput1へのキーボード入力
 		//5. 例外処理　
 		//5-1. try文
 		try {
+			//1-3. strInput1へのキーボード入力
 			String strInput1 = scanner.nextLine();
 			//1-4. String型からint型に型変換
 			int num = Integer.parseInt(strInput1);
