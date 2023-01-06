@@ -26,10 +26,9 @@ public class Question11 {
 			//メッセージ出力
 			System.out.println(
 					intInput1 + " と " + intInput2 + " の掛け算結果の値は " + multiplication(intInput1, intInput2) + " です");
-			//メッセージ出力
 			System.out.println(
 					intInput1 + " と " + intInput2 + " の掛け算結果を2で割った値は " + division(intInput1, intInput2) + " です");
-		}catch (NumberFormatException e) {//例外処理
+		} catch (NumberFormatException e) {//例外処理
 			//メッセージ出力
 			System.out.println("整数以外の値が入力されました");
 		}
