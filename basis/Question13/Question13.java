@@ -1,6 +1,5 @@
 package basis.Question13;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Question13 {
@@ -12,47 +11,44 @@ public class Question13 {
 		//try-with-resources
 		try (Scanner scanner = new Scanner(System.in);) {
 			//キーボード入力
-			int bango = scanner.nextInt();
-			//switch文
-			switch (bango) {
-				//1の場合
-				case 1:
-					//メッセージ出力
-					System.out.println("整数を入力してください");
-					System.out.print("1個目：");
-					//キーボード入力
-					int intInput1 = scanner.nextInt();
-					//メッセージ出力
-					System.out.print("2個目：");
-					//キーボード入力
-					int intInput2 = scanner.nextInt();
-					//CalculateSuperクラスのインスタンス生成
-					CalculateSuper CalcSuper = new CalculateSuper(intInput1, intInput2);
-					//flowメソッドの呼び出し
-					CalcSuper.flow();
-					break;
-				//2の場合
-				case 2:
-					//メッセージ出力
-					System.out.println("整数を入力してください");
-					System.out.print("1個目：");
-					//キーボード入力
-					int intInput3 = scanner.nextInt();
-					//メッセージ出力
-					System.out.print("2個目：");
-					//キーボード入力
-					int intInput4 = scanner.nextInt();
-					//CalculateChildクラスのインスタンス生成
-					CalculateChild CalcChild = new CalculateChild(intInput3, intInput4);
-					//flowメソッドの呼び出し
-					CalcChild.flow();
-					break;
-				//defaultメソッド
-				default:
-					//メッセージ出力
-					System.out.println("1～2の範囲で入力してください");
+			String bango = scanner.nextLine();
+			//String型からint型への変換
+			int num = Integer.parseInt(bango);
+			if (num == 1 || num == 2) {
+				//メッセージ出力
+				System.out.println("整数を入力してください");
+				System.out.print("1個目：");
+				//キーボード入力
+				String strInput1 = scanner.nextLine();
+				//String型からint型への変換
+				int intInput1 = Integer.parseInt(strInput1);
+				//メッセージ出力
+				System.out.print("2個目：");
+				//キーボード入力
+				String strInput2 = scanner.nextLine();
+				//String型からint型への変換
+				int intInput2 = Integer.parseInt(strInput2);
+				//switch文
+				switch (num) {
+					//1の場合
+					case 1:
+						//CalculateSuperクラスのインスタンス生成
+						CalculateSuper calcSuper = new CalculateSuper(intInput1, intInput2);
+						//flowメソッドの呼び出し
+						calcSuper.flow();
+						break;
+					//2の場合
+					case 2:
+						//CalculateChildクラスのインスタンス生成
+						CalculateChild calcChild = new CalculateChild(intInput1, intInput2);
+						//flowメソッドの呼び出し
+						calcChild.flow();
+						break;
+				}
+			} else {
+				System.out.println("1～2の範囲で入力してください");
 			}
-		} catch (InputMismatchException e) {//catchメソッド
+		} catch (NumberFormatException e) {//catchメソッド
 			//メッセージ出力
 			System.out.println("整数以外の値が入力されました");
 		}
