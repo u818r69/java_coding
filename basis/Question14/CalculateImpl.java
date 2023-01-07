@@ -3,6 +3,7 @@ package basis.Question14;
 public class CalculateImpl implements Calculate {
 	//定数の宣言
 	static final int DIVISOR_NUMBER = 2;
+
 	//multiplicationメソッドの宣言（戻り値型　int、引数　int, int）
 	public int multiplication(int num1, int num2) {
 		//引数の掛け算をする
@@ -10,6 +11,7 @@ public class CalculateImpl implements Calculate {
 		//return文
 		return ans1;
 	}
+
 	//divisionメソッドの宣言（戻り値型　int、引数　int, int）
 	public int division(int num1, int num2) {
 		//引数の掛け算結果を2でわる
@@ -17,6 +19,7 @@ public class CalculateImpl implements Calculate {
 		//return文
 		return ans2;
 	}
-	public CalculateImpl() {	
+
+	public CalculateImpl() {
 	}
 }
